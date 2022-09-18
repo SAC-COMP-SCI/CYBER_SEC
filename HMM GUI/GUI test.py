@@ -5,14 +5,32 @@ from tkinter import *
 
 
 
+def OPD_INSTALL_FUNC():
+    global OPD_INSTALL_FUNC
+    win5 = Toplevel(win1)
+    win5.geometry("600x600")
+    win5.configure(bg="Black")
+    win5.title("Operation Dementia")
+    win5.resizable(False, False)
+    
+    win5.mainloop()
+
+
 def Op_Dem_Func():
     global Op_Dem_Func
+    global win1
     win1 = Toplevel(MAIN_PAGE)
     win1.geometry("600x600")
+    win1.configure(bg="purple",)
     win1.title("Operation Dementia")
-    win1.configure(bg="purple", fg="turquoise")
     win1.resizable(False, False)
     
+    win1_butt1 = Button(win1, text="Download .exe", command=OPD_INSTALL_FUNC)
+    win1_t1 = Text(win1, "Not your Grandpappy's Malware", bg="turqoise", font=("Arial", 20))
+    
+
+    win1_butt1.pack()
+    win1_t1.pack()
     win1.mainloop()
 
 
@@ -25,8 +43,8 @@ def Pecunia_func():
     global Pecunia_func
     win2 = Toplevel(MAIN_PAGE)
     win2.geometry("600x600")
-    win2.title("Pecunia Secretum")
     win2.configure(bg="black")
+    win2.title("Pecunia Secretum")
     win2.resizable(False, False)
     
     win2.mainloop()
@@ -40,26 +58,28 @@ def Pecunia_func():
 
 def Utiligram_Func():
     global Utiligram_Func
-    win2 = Toplevel(MAIN_PAGE)
-    win2.geometry("600x600")
-    win2.title("Pecunia Secretum")
-    win2.configure(bg="black")
-    win2.resizable(False, False)
+    win3 = Toplevel(MAIN_PAGE)
+    win3.geometry("600x600")
+    win3.configure(bg="black")
+    win3.title("Pecunia Secretum")
     
-    win2.mainloop()
+    win3.resizable(False, False)
+    
+    win3.mainloop()
 
 
 
 def Triple_G_Func():
-    global Utiligram_Func
-    win3 = Toplevel(MAIN_PAGE)
-    win3.geometry("600x600")
-    win3.title("Pecunia Secretum")
-    Triple_G_L1 = label("Gaslight, Gatekeep, Girlboss")
-    win3.configure(bg="Orange", fg="Black")
-    win3.resizable(False, False)
+    global Triple_G_Func
+    win4 = Toplevel(MAIN_PAGE)
+    win4.geometry("600x600")
+    win4.configure(bg="Orange", fg="Black")
+    win4.resizable(False, False)
+    win4.title("Pecunia Secretum")
+    win4 = label("Gaslight, Gatekeep, Girlboss")
     
-    win3.mainloop()
+    
+    win4.mainloop()
 
 
 
@@ -77,7 +97,7 @@ def Triple_G_Func():
 MAIN_PAGE = Tk()
 MAIN_PAGE.title("Home Made Malware")
 MAIN_PAGE.geometry("600x600")
-MAIN_PAGE.configure(bg="black")
+MAIN_PAGE.configure(bg="grey")
 MAIN_PAGE.resizable(False, False)
 Operation_Dementia = Button(MAIN_PAGE, text="Operation Dementia", command=Op_Dem_Func, bg="Purple", fg="turquoise", font=("Arial", 20))
 Pecunia_Secretum = Button(MAIN_PAGE, text="Pecunia Secretum", command=Pecunia_func, bg="Orange", fg="White", font=("Arial", 20))
