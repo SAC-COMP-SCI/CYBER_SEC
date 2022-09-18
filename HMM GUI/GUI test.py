@@ -21,7 +21,7 @@ def Op_Dem_Func():
     global win1
     win1 = Toplevel(MAIN_PAGE)
     win1.geometry("600x600")
-    win1.configure(bg="purple",)
+    win1.configure(bg="purple")
     win1.title("Operation Dementia")
     win1.resizable(False, False)
     
@@ -74,11 +74,17 @@ def Triple_G_Func():
     global Triple_G_Func
     win4 = Toplevel(MAIN_PAGE)
     win4.geometry("600x600")
-    win4.configure(bg="Orange", fg="Black")
-    win4.resizable(False, False)
-    win4.title("Pecunia Secretum")
-    win4 = label("Gaslight, Gatekeep, Girlboss")
-    
+    win4.configure(bg="black")
+    win4.resizable(True, True)
+    win4.title("Triple G")
+    win4_l1 = Label(win4, text="Gaslight, Gatekeep, Girlboss", bg="Black", fg="Green", font=("Roboto Mono", 30))
+    win4_l2 = Label(win4, text="Gaslight: To manipulate (someone) by psychological means into questioning their own sanity.", bg="Black", fg="Green", font=("Roboto Mono", 14))
+    win4_l3 = Label(win4, text="Gatekeep: To control access to (something) by controlling who is allowed to enter or leave.", bg="Black", fg="Green", font=("Roboto Mono", 14))
+    win4_l4 = Label(win4, text="Girlboss: IDK what this means, but it's in the Urban Dictionary.", bg="Black", fg="Green", font=("Roboto Mono", 14))
+    win4_l1.pack()
+    win4_l2.pack()
+    win4_l3.pack()
+    win4_l4.pack()
     
     win4.mainloop()
 
