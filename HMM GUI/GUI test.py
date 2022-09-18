@@ -48,7 +48,6 @@ def Pecunia_func():
     win2.configure(bg="black")
     win2.title("Pecunia Secretum")
     win2.resizable(False, False)
-    
     win2.mainloop()
 
 
