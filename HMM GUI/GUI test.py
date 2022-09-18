@@ -25,10 +25,12 @@ def Op_Dem_Func():
     win1.title("Operation Dementia")
     win1.resizable(False, False)
     
+    win1_l1 = Label(win1, text="Operation Dementia", bg="purple", fg="white", font=("Arial", 20))
     win1_butt1 = Button(win1, text="Download .exe", command=OPD_INSTALL_FUNC)
-    win1_t1 = Text(win1, "Not your Grandpappy's Malware", bg="turqoise", font=("Arial", 20))
+    win1_t1 = Text(win1, height=10, width=50, bg="blue", font=("Arial", 20))
+    win1_t1.insert(INSERT, "Not your Grandpappy's Malware")
     
-
+    win1_l1.pack()
     win1_butt1.pack()
     win1_t1.pack()
     win1.mainloop()
