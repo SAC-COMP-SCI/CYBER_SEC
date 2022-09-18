@@ -12,7 +12,14 @@ def OPD_INSTALL_FUNC():
     win5.configure(bg="Black")
     win5.title("Operation Dementia")
     win5.resizable(False, False)
-    
+
+    win5_l1 = Label(win5, text="Install Operation Dementia", bg="Black", fg="White", font=("Arial", 20))
+    win5_l2 = Label(win5, text="This wont take long!", bg="Black", fg="White", font=("Arial", 20))
+    win5_but1 = Button(win5, text="Install", command=OPD_INSTALL_FUNC)
+
+    win5_l1.pack()
+    win5_l2.pack()
+    win5_but1.pack()
     win5.mainloop()
 
 
@@ -91,6 +98,18 @@ def Triple_G_Func():
 
 
 
+def LogRoller_Func():
+    global LogRoller_Func
+    win6 = Toplevel(MAIN_PAGE)
+    win6.geometry("600x600")
+    win6.configure(bg="black")
+    win6.title("Log Roller")
+    win6.resizable(True, True)
+    win6_l1 = Label(win6, text="Log Roller is a lightweight botnet GUI", bg="Black", fg="Green", font=("Roboto Mono", 30))
+    win6.mainloop()
+
+
+
 
 
 
@@ -110,6 +129,8 @@ Operation_Dementia = Button(MAIN_PAGE, text="Operation Dementia", command=Op_Dem
 Pecunia_Secretum = Button(MAIN_PAGE, text="Pecunia Secretum", command=Pecunia_func, bg="Orange", fg="White", font=("Arial", 20))
 Utiligram = Button(MAIN_PAGE, text="Utiligram", command=Utiligram_Func, bg="Blue", fg="White", font=("Arial", 20))
 Triple_G = Button(MAIN_PAGE, text="Triple G", command=Triple_G_Func, bg="Black", fg="Green", font=("Arial", 20))
+LogRolling = Button(MAIN_PAGE, text="Log Rolling", command=Log_Rolling_Func, bg="Black", fg="Green", font=("Arial", 20))
+
 
 
 
