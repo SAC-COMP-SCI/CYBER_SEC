@@ -84,7 +84,7 @@ def Pecunia_func():
     global Pecunia_func
     win2 = Toplevel(MAIN_PAGE)
     win2.geometry("600x600")
-    win2.configure(bg="black")
+    win2.configure(bg="Orange")
     win2.title("Pecunia Secretum")
     win2.resizable(True, True)
     win2_l1 = Label(win2, text="Pecunia Secretum is a point and shoot crypto currency miner GUI", bg="Orange", fg="Black", font=("Roboto Mono", 30))
