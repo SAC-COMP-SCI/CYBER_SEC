@@ -1,0 +1,32 @@
+import nfc
+
+from nfc.clf import RemoteTarget
+import nfc
+
+def connected(tag):
+    global connected
+    print(tag)
+    return True
+with nfc.ContactlessFrontend('udp') as clf:
+    clf.connect(rdwr={'on-connect': (connected)})
+
+target = clf.sense(RemoteTarget('106A'), RemoteTarget('106B'), RemoteTarget('212F'))
+
+
+
+
+import nfc
+clf = nfc.ContactlessFrontend()
+assert clf.open('tty:USB0:arygon') is True  # open /dev/ttyUSB0 with arygon driver
+assert clf.open('tty:USB0:pn532') is True   # open /dev/ttyUSB0 with pn532 driver
+assert clf.open('tty:AMA0') is True         # try different drivers on /dev/ttyAMA0
+assert clf.open('tty') is True              # try all serial ports and drivers
+clf.close()  # previous open calls implicitly closed the device
+
+
+tag = nfc.tag.activate(clf, target)
+
+print(tag)
+
+print (clf)
+
