@@ -130,7 +130,8 @@ Pecunia_Secretum = Button(MAIN_PAGE, text="Pecunia Secretum", command=Pecunia_fu
 Utiligram = Button(MAIN_PAGE, text="Utiligram", command=Utiligram_Func, bg="Blue", fg="White", font=("Arial", 20))
 Triple_G = Button(MAIN_PAGE, text="Triple G", command=Triple_G_Func, bg="Black", fg="Green", font=("Arial", 20))
 LogRolling = Button(MAIN_PAGE, text="Log Rolling", command=Log_Rolling_Func, bg="Black", fg="Green", font=("Arial", 20))
-
+Near_Field_Communication = Button(MAIN_PAGE, text="Near Field Communication", command=NFC_Func, bg="Black", fg="Green", font=("Arial", 20))
+Unigram = Button(MAIN_PAGE, text="Unigram", command=Unigram_Func, bg="Black", fg="Green", font=("Arial", 20))
 
 
 
@@ -138,5 +139,8 @@ Operation_Dementia.pack(pady=20)
 Pecunia_Secretum.pack(pady=20)
 Utiligram.pack(pady=20)
 Triple_G.pack(pady=20)
+LogRolling.pack(pady=20)
+Near_Field_Communication.pack(pady=20)
+Unigram.pack(pady=20)
 MAIN_PAGE.mainloop()
 
