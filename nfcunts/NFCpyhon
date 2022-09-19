@@ -9,6 +9,9 @@ from ndef import message
 
 
 
+if __name__ == '__main__':
+
+
 
 def main():
     with nfc.ContactlessFrontend('usb') as clf:
@@ -29,10 +32,10 @@ target = clf.sense(RemoteTarget('106A'), RemoteTarget('106B'), RemoteTarget('212
 
 import nfc
 clf = nfc.ContactlessFrontend()
-assert clf.open('tty:USB0:arygon') is True  # open /dev/ttyUSB0 with arygon driver
-assert clf.open('tty:USB0:pn532') is True   # open /dev/ttyUSB0 with pn532 driver
-assert clf.open('tty:AMA0') is True         # try different drivers on /dev/ttyAMA0
-assert clf.open('tty') is True              # try all serial ports and drivers
+assert clf.connect('tty:USB0:arygon') is True  # open /dev/ttyUSB0 with arygon driver
+assert clf.connect('tty:USB0:pn532') is True   # open /dev/ttyUSB0 with pn532 driver
+assert clf.connect('tty:AMA0') is True         # try different drivers on /dev/ttyAMA0
+assert clf.connect('tty') is True              # try all serial ports and drivers
 clf.close()  # previous open calls implicitly closed the device
 
 
@@ -56,4 +59,4 @@ print (clf)
 
 import ndef
 message1 = ndef.message(ndef.TextRecord('Hello World!'))
-assert tag.ndef is not None
+assert tag is not None
