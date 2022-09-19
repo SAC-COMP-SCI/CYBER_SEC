@@ -3,6 +3,7 @@ from mailbox import Mailbox
 from struct import pack
 import tkinter
 from tkinter import *
+from turtle import width
 
 
 
@@ -20,7 +21,7 @@ def Pecunia_Secretum_func():
         label(text=clicked1.get())
     win10_l1 = Label(win10, text="Pecunia Secretum is a point and shoot crypto currency miner GUI", bg="Black", fg="Green", font=("Roboto Mono", 30))
     win10_l2 = Label(win10, text="Pecunia Secretum is latin for fuck the federal reserve.", bg="Black", fg="Green", font=("Roboto Mono", 30))
-    win10_dd1 = OptionMenu(win10, clicked1, *options1)
+    win10_dd1 = OptionMenu(win10, clicked1, *options1, height=20, width=20)
     
     
     win10_l3 = Label(win10, text="Select your OS", bg="Black", fg="Green", font=("Roboto Mono", 30))
@@ -86,8 +87,8 @@ def Pecunia_func():
     win2.configure(bg="black")
     win2.title("Pecunia Secretum")
     win2.resizable(True, True)
-    win2_l1 = Label(win2, text="Pecunia Secretum is a point and shoot crypto currency miner GUI", bg="Black", fg="Green", font=("Roboto Mono", 30))
-    win2_l2 = Label(win2, text="Pecunia Secretum is latin for fuck the federal reserve.", bg="Black", fg="Green", font=("Roboto Mono", 30))
+    win2_l1 = Label(win2, text="Pecunia Secretum is a point and shoot crypto currency miner GUI", bg="Orange", fg="Black", font=("Roboto Mono", 30))
+    win2_l2 = Label(win2, text="Pecunia Secretum is latin for fuck the federal reserve.", bg="Orange", fg="Black", font=("Roboto Mono", 30))
     win2_but1 = Button(win2, text="Download .exe", command=Pecunia_Secretum_func)
 
 
