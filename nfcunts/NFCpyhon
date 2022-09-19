@@ -1,7 +1,19 @@
 import nfc
-
+import ndef # pip install ndef
 from nfc.clf import RemoteTarget
 import nfc
+from nfc.clf import RemoteTarget
+from ndef import TextRecord, UriRecord, SmartposterRecord
+from ndef import message_decoder
+from ndef import message
+
+
+
+
+def main():
+    with nfc.ContactlessFrontend('usb') as clf:
+        tag = clf.connect(rdwr={'on-connect': connected})
+        print(tag)
 
 def connected(tag):
     global connected
@@ -28,10 +40,20 @@ tag = nfc.tag.activate(clf, target)
 
 print(tag)
 
+message1 = ndef.message(ndef.TextRecord('Hello World!'))
+assert tag.ndef is not None
+for record in tag.ndef.records:
+    print(record)
 
 
-from nfc.clf import RemoteTarget
 target = clf.sense(RemoteTarget('106A'), RemoteTarget('106B'), RemoteTarget('212F'))
 print(target)
+
+
+tag = clf.connect(rdwr={'on-connect': lambda tag: False})
 print (clf)
 
+
+import ndef
+message1 = ndef.message(ndef.TextRecord('Hello World!'))
+assert tag.ndef is not None
