@@ -1,4 +1,5 @@
 from cProfile import label
+from mailbox import Mailbox
 from struct import pack
 import tkinter
 from tkinter import *
@@ -111,8 +112,29 @@ def LogRoller_Func():
 
 
 
-def near_field_cucking():
+def NFC_func():
+    global NFC_func
+    win7 = Toplevel(MAIN_PAGE)
+    win7.geometry("600x600")
+    win7.configure(bg="Dark Green")
+    win7.title("Near Field Cuckary")
+    win7.resizable(True, True)
+    win_l1 = Label(win7, text="Near Field Cuckary is a NFC programming GUI", bg="Blue", fg="Red", font=("Roboto Mono", 30))
+    win_l1.pack()
+    win7.mainloop()
 
+
+
+def Unigram_Func():
+    global Unigram_Func
+    win8 = Toplevel(MAIN_PAGE)
+    win8.geometry("600x600")
+    win8.configure(bg="black")
+    win8.title("Unigram")
+    win8.resizable(True, True)
+    win8_l1 = Label(win8, text="Unigram is a Instagram botnet GUI", bg="Black", fg="Green", font=("Roboto Mono", 30))
+    win8_l1.pack()
+    win8.mainloop()
 
 
 
@@ -131,8 +153,8 @@ Operation_Dementia = Button(MAIN_PAGE, text="Operation Dementia", command=Op_Dem
 Pecunia_Secretum = Button(MAIN_PAGE, text="Pecunia Secretum", command=Pecunia_func, bg="Orange", fg="White", font=("Arial", 20))
 Utiligram = Button(MAIN_PAGE, text="Utiligram", command=Utiligram_Func, bg="Blue", fg="White", font=("Arial", 20))
 Triple_G = Button(MAIN_PAGE, text="Triple G", command=Triple_G_Func, bg="Black", fg="Green", font=("Arial", 20))
-LogRolling = Button(MAIN_PAGE, text="Log Rolling", command=Log_Rolling_Func, bg="Black", fg="Green", font=("Arial", 20))
-Near_Field_Communication = Button(MAIN_PAGE, text="Near Field Communication", command=NFC_Func, bg="Black", fg="Green", font=("Arial", 20))
+LogRolling = Button(MAIN_PAGE, text="Log Rolling", command=LogRoller_Func, bg="Brown", fg="Green", font=("Arial", 20))
+Near_Field_Communication = Button(MAIN_PAGE, text="Near Field Communication", command=NFC_func, bg="Blue", fg="Red", font=("Arial", 20))
 Unigram = Button(MAIN_PAGE, text="Unigram", command=Unigram_Func, bg="Black", fg="Green", font=("Arial", 20))
 
 
