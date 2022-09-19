@@ -6,6 +6,33 @@ from tkinter import *
 
 
 
+
+def Pecunia_Secretum_func():
+    global Pecunia_Secretum_func
+    win10 = Toplevel(MAIN_PAGE)
+    win10.geometry("1600x1600")
+    win10.configure(bg="black")
+    win10.title("Pecunia Secretum")
+    win10.resizable(True, True)
+    def show1():
+        label.config(text=clicked.get())
+    win10_l1 = Label(win10, text="Pecunia Secretum is a point and shoot crypto currency miner GUI", bg="Black", fg="Green", font=("Roboto Mono", 30))
+    win10_l2 = Label(win10, text="Pecunia Secretum is latin for fuck the federal reserve.", bg="Black", fg="Green", font=("Roboto Mono", 30))
+    win10_dd1 = OptionMenu(win10, clicked, "Debian, Arch, Fedora, Windows, Mac")
+    clicked = StringVar()
+    clicked.set("Debian, Arch, Fedora, Windows, Mac")
+    win10_l3 = Label(win10, text="Select your OS", bg="Black", fg="Green", font=("Roboto Mono", 30))
+    
+    win10_l1.pack()
+    win10_l2.pack()
+    win10_dd1.pack()
+    win10_l3.pack()
+    win10.mainloop()
+
+
+
+
+
 def OPD_INSTALL_FUNC():
     global OPD_INSTALL_FUNC
     win5 = Toplevel(win1)
@@ -55,7 +82,15 @@ def Pecunia_func():
     win2.geometry("600x600")
     win2.configure(bg="black")
     win2.title("Pecunia Secretum")
-    win2.resizable(False, False)
+    win2.resizable(True, True)
+    win2_l1 = Label(win2, text="Pecunia Secretum is a point and shoot crypto currency miner GUI", bg="Black", fg="Green", font=("Roboto Mono", 30))
+    win2_l2 = Label(win2, text="Pecunia Secretum is latin for fuck the federal reserve.", bg="Black", fg="Green", font=("Roboto Mono", 30))
+    win2_but1 = Button(win2, text="Download .exe", command=Pecunia_Secretum_func)
+
+
+    win2_l1.pack()
+    win2_l2.pack()
+    win2_but1.pack()
     win2.mainloop()
 
 
@@ -149,23 +184,16 @@ MAIN_PAGE = Tk()
 MAIN_PAGE.title("Home Made Malware")
 MAIN_PAGE.geometry("600x600")
 MAIN_PAGE.configure(bg="grey")
-MAIN_PAGE.resizable(False, False)
-Operation_Dementia = Button(MAIN_PAGE, text="Operation Dementia", command=Op_Dem_Func, bg="Purple", fg="turquoise", font=("Arial", 20))
-Pecunia_Secretum = Button(MAIN_PAGE, text="Pecunia Secretum", command=Pecunia_func, bg="Orange", fg="White", font=("Arial", 20))
-Utiligram = Button(MAIN_PAGE, text="Utiligram", command=Utiligram_Func, bg="Blue", fg="White", font=("Arial", 20))
-Triple_G = Button(MAIN_PAGE, text="Triple G", command=Triple_G_Func, bg="Black", fg="Green", font=("Arial", 20))
-LogRolling = Button(MAIN_PAGE, text="Log Rolling", command=LogRoller_Func, bg="Brown", fg="Green", font=("Arial", 20))
-Near_Field_Communication = Button(MAIN_PAGE, text="Near Field Communication", command=NFC_func, bg="Blue", fg="Red", font=("Arial", 20))
-Unigram = Button(MAIN_PAGE, text="Unigram", command=Unigram_Func, bg="Black", fg="Green", font=("Arial", 20))
+MAIN_PAGE.resizable(True,True)
+Operation_Dementia = Button(MAIN_PAGE, text="Operation Dementia", command=Op_Dem_Func, bg="Purple", fg="turquoise", font=("Arial", 20)).grid(column=0, row=0)
+Pecunia_Secretum = Button(MAIN_PAGE, text="Pecunia Secretum", command=Pecunia_func, bg="Orange", fg="White", font=("Arial", 20)).grid(column=0, row=1)
+Utiligram = Button(MAIN_PAGE, text="Utiligram", command=Utiligram_Func, bg="Blue", fg="White", font=("Arial", 20)).grid(column=0, row=2)
+Triple_G = Button(MAIN_PAGE, text="Triple G", command=Triple_G_Func, bg="Black", fg="Green", font=("Arial", 20)).grid(column=1, row=3)
+LogRolling = Button(MAIN_PAGE, text="Log Rolling", command=LogRoller_Func, bg="Light Grey", fg="Green", font=("Arial", 20)).grid(column=1, row=0)
+Near_Field_Communication = Button(MAIN_PAGE, text="Near Field Communication", command=NFC_func, bg="Blue", fg="Red", font=("Arial", 20)).grid(column=1, row=1)
+Unigram = Button(MAIN_PAGE, text="Unigram", command=Unigram_Func, bg="Red", fg="Orange", font=("Arial", 20)).grid(column=1, row=2)
 
 
 
-Operation_Dementia.pack(pady=20)
-Pecunia_Secretum.pack(pady=20)
-Utiligram.pack(pady=20)
-Triple_G.pack(pady=20)
-LogRolling.pack(pady=20)
-Near_Field_Communication.pack(pady=20)
-Unigram.pack(pady=20)
 MAIN_PAGE.mainloop()
 
