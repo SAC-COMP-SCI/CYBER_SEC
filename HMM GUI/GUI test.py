@@ -14,15 +14,18 @@ def Pecunia_Secretum_func():
     win10.configure(bg="black")
     win10.title("Pecunia Secretum")
     win10.resizable(True, True)
+    options1 = ["Debian", "Arch", "Fedora", "Windows", "Mac"]
+    clicked1 = StringVar()
     def show1():
-        label.config(text=clicked.get())
+        label(text=clicked1.get())
     win10_l1 = Label(win10, text="Pecunia Secretum is a point and shoot crypto currency miner GUI", bg="Black", fg="Green", font=("Roboto Mono", 30))
     win10_l2 = Label(win10, text="Pecunia Secretum is latin for fuck the federal reserve.", bg="Black", fg="Green", font=("Roboto Mono", 30))
-    win10_dd1 = OptionMenu(win10, clicked, "Debian, Arch, Fedora, Windows, Mac")
-    clicked = StringVar()
-    clicked.set("Debian, Arch, Fedora, Windows, Mac")
+    win10_dd1 = OptionMenu(win10, clicked1, *options1)
+    
+    
     win10_l3 = Label(win10, text="Select your OS", bg="Black", fg="Green", font=("Roboto Mono", 30))
     
+    win10_dd1.pack()
     win10_l1.pack()
     win10_l2.pack()
     win10_dd1.pack()
