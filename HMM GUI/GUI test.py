@@ -1,5 +1,6 @@
 from cProfile import label
 from mailbox import Mailbox
+from msilib import Win64
 from struct import pack
 import tkinter
 from tkinter import *
@@ -12,7 +13,16 @@ from turtle import width
 
 def utiligram_func2():
     global utiligram_func2
+    win11 = Toplevel(Utiligram_Func)
+    win11.geometry("600x600")
+    win11.configure(bg="Blue")
+    win11.title("Utiligram")
+    win11.resizable(True, True)
+    win11_l1 = Label(win11, text="Utiligram is a lightweight Metaploit GUI", bg="Blue", fg="Green", font=("Roboto Mono", 30))
     
+    
+    win11.mainloop()
+
 
 
 def Pecunia_Secretum_func2():
@@ -116,10 +126,19 @@ def Utiligram_Func():
     win3 = Toplevel(MAIN_PAGE)
     win3.geometry("600x600")
     win3.configure(bg="black")
-    win3.title("Pecunia Secretum")
+    win3.resizable(True, True)
+    win3.title("Utiligram Installer")
+    win3_l1 = Label(win3, text="Select the version below")
+    win3_butt1 = Button(win3, text="FULL INSTALL" )
+    win3_butt2 = Button(win3, text="Lightweight Install")
+    win3_butt3 = Button (win3, text="Minimal Install")
     
-    win3.resizable(False, False)
-    
+
+
+    win3_l1.pack()
+    win3_butt1.pack()
+    win3_butt2.pack()
+    win3_butt3.pack()
     win3.mainloop()
 
 
