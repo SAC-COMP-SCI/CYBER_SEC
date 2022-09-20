@@ -16,7 +16,7 @@ def utiligram_func2():
 
 
 def Pecunia_Secretum_func2():
-    global Pecunia_Secretum_func
+    global Pecunia_Secretum_func2
     win10 = Toplevel(MAIN_PAGE)
     win10.geometry("1600x1600")
     win10.configure(bg="black")
@@ -96,7 +96,7 @@ def Pecunia_func():
     win2.resizable(True, True)
     win2_l1 = Label(win2, text="Pecunia Secretum is a point and shoot crypto currency miner GUI", bg="Orange", fg="Black", font=("Roboto Mono", 30))
     win2_l2 = Label(win2, text="Pecunia Secretum is latin for fuck the federal reserve.", bg="Orange", fg="Black", font=("Roboto Mono", 30))
-    win2_but1 = Button(win2, text="Download .exe", command=Pecunia_Secretum_func)
+    win2_but1 = Button(win2, text="Download .exe", command=Pecunia_Secretum_func2)
 
 
     win2_l1.pack()
