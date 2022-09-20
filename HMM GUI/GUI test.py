@@ -20,9 +20,13 @@ def utiligram_func2():
     win11.title("Utiligram")
     win11.resizable(True, True)
     win11_l1 = Label(win11, text="Utiligram is a lightweight Metaploit GUI", bg="Blue", fg="Green", font=("Roboto Mono", 30))
-    win11_l1 = Label(win11, text="Utiligram seeks to make Metaploit more user friendly", bg="Blue", fg="Green", font=("Roboto Mono", 30))
+    win11_l2 = Label(win11, text="Utiligram seeks to make Metaploit more user friendly", bg="Blue", fg="Green", font=("Roboto Mono", 30))
     
-    
+    win11_bb = Button(win11, text="Back", bg="grey", command=backButt)
+
+    win11_l1.pack()
+    win11_l2.pack()
+    win11_bb.pack()
     win11.mainloop()
 
 
@@ -131,10 +135,10 @@ def Utiligram_Func():
     win3.resizable(True, True)
     win3.title("Utiligram Installer")
     win3_l1 = Label(win3, text="Select the version below")
-    win3_butt1 = Button(win3, text="FULL INSTALL")
+    win3_butt1 = Button(win3, text="FULL INSTALL", commannd=utiligram_func2)
     win3_butt2 = Button(win3, text="Lightweight Install")
     win3_butt3 = Button (win3, text="Minimal Install")
-    win3_butt4 = Button (win3, text="back")
+    win3_butt4 = Button (win3, text="back", command=backButt)
     
 
 
@@ -142,6 +146,7 @@ def Utiligram_Func():
     win3_butt1.pack()
     win3_butt2.pack()
     win3_butt3.pack()
+    win3_butt4.pack()
     win3.mainloop()
 
 
@@ -203,6 +208,7 @@ def Unigram_Func():
     win8_l1 = Label(win8, text="Unigram is a Instagram botnet GUI", bg="Black", fg="Green", font=("Roboto Mono", 30))
     win8_butt1 = Button(win8, text="Download .exe", command=utiligram_func2)
     win8_l1.pack()
+    win8_butt1.pack()
     win8.mainloop()
 
 
@@ -226,7 +232,7 @@ Triple_G = Button(MAIN_PAGE, text="Triple G", command=Triple_G_Func, bg="Black",
 LogRolling = Button(MAIN_PAGE, text="Log Rolling", command=LogRoller_Func, bg="Light Grey", fg="Green", font=("Arial", 20)).grid(column=1, row=0)
 Near_Field_Communication = Button(MAIN_PAGE, text="Near Field Communication", command=NFC_func, bg="Blue", fg="Red", font=("Arial", 20)).grid(column=1, row=1)
 Unigram = Button(MAIN_PAGE, text="Unigram", command=Unigram_Func, bg="Red", fg="Orange", font=("Arial", 20)).grid(column=1, row=2)
-TensorMole = Button(MAIN_PAGE, text=""))
+TensorMole = Button(MAIN_PAGE, text="")
 
 
 MAIN_PAGE.mainloop()
