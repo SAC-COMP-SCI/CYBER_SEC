@@ -8,7 +8,14 @@ from turtle import width
 
 
 
-def Pecunia_Secretum_func():
+
+
+def utiligram_func2():
+    global utiligram_func2
+    
+
+
+def Pecunia_Secretum_func2():
     global Pecunia_Secretum_func
     win10 = Toplevel(MAIN_PAGE)
     win10.geometry("1600x1600")
