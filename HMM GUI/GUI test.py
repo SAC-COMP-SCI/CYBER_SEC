@@ -20,7 +20,8 @@ def utiligram_func2():
     win11.title("Utiligram")
     win11.resizable(True, True)
     win11_l1 = Label(win11, text="Utiligram is a lightweight Metaploit GUI", bg="Blue", fg="Green", font=("Roboto Mono", 30))
-    win11
+    win11_l1 = Label(win11, text="Utiligram seeks to make Metaploit more user friendly", bg="Blue", fg="Green", font=("Roboto Mono", 30))
+    
     
     win11.mainloop()
 
