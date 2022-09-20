@@ -229,3 +229,6 @@ Unigram = Button(MAIN_PAGE, text="Unigram", command=Unigram_Func, bg="Red", fg="
 
 MAIN_PAGE.mainloop()
 
+
+
+def 
