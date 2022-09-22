@@ -8,7 +8,21 @@ from tkinter import *
 from turtle import back, width
 
 
+def project_jedi_func():
+    global project_jedi_func
+    win4 = Toplevel(MAIN_PAGE)
+    win4.geometry("600x600")
+    win4.configure(bg="Red")
+    win4.title("Project Jedi")
+    win4.resizable(True, True)
+    win4_l1 = Label(win4, text="Project Jedi", bg="Red", fg="Black", font=("Roboto Mono", 30))
+    win4_l2 = Label(win4, text="Project Jedi seeks to make fucking with 'tHE cAmERa IsnT tHaT bAD' mfs a lot easier", bg="Red", fg="Black", font=("Roboto Mono", 30))
+    win4_but1 = Button(win4, text="Download .exe", command=utiligram_func2)
 
+    win4_l1.pack()
+    win4_l2.pack()
+    win4_but1.pack()
+    win4.mainloop()
 
 
 
@@ -233,7 +247,7 @@ LogRolling = Button(MAIN_PAGE, text="Log Rolling", command=LogRoller_Func, bg="L
 Near_Field_Communication = Button(MAIN_PAGE, text="Near Field Communication", command=NFC_func, bg="Blue", fg="Red", font=("Arial", 20)).grid(column=1, row=1)
 Unigram = Button(MAIN_PAGE, text="Unigram", command=Unigram_Func, bg="Red", fg="Orange", font=("Arial", 20)).grid(column=1, row=2)
 TensorMole = Button(MAIN_PAGE, text="")
-
+Project_Jedi = Button(MAIN_PAGE, text="Project Jedi", command=Project_Jedi_Func, bg="Black", fg="Green", font=("Arial", 20)).grid(column=0, row=3)
 
 MAIN_PAGE.mainloop()
 
